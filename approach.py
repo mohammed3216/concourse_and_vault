@@ -2,11 +2,19 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 import os
 
 def login_and_download_file(url, username, password):
-    driver = webdriver.Chrome()
-    driver.maximize_window()
+    # Set up Chrome options
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")  # Run in headless mode
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--window-size=1920x1080")  # Ensure the browser is large enough
+
+    driver = webdriver.Chrome(options=chrome_options)
     driver.get(url)
 
     try:
@@ -46,6 +54,6 @@ def login_and_download_file(url, username, password):
 
 if __name__ == "__main__":
     url = "https://www.screener.in/company/RELIANCE/consolidated/"
-    username = os.getenv('SECRET_USERNAME')
+    username = os.getenv('SECRET_EMAIL')
     password = os.getenv('SECRET_PASSWORD')
     login_and_download_file(url, username, password)
