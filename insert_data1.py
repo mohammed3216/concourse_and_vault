@@ -35,7 +35,7 @@ df_table = df_table[1:]
 
 db_host = "192.168.3.59"
 db_name = "reliance"
-db_user = "md-postgres"
+db_user = "md-postgres1"
 db_password = "password"
 db_port = "5432"
 
