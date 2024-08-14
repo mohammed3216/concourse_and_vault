@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Set the Vault address and token
-export VAULT_ADDR='http://vault:8200'
+export VAULT_ADDR='http://192.168.3.59:8200'
 export VAULT_TOKEN='test'
 
 # Retrieve the secrets from Vault
