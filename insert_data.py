@@ -33,8 +33,8 @@ df_table.to_csv('table_data.csv', index=False)
 conn = psycopg2.connect(
     host=os.getenv('POSTGRES_HOST', 'localhost'),
     database=os.getenv('POSTGRES_DB', 'concourse'),
-    user=os.getenv('POSTGRES_USER', 'concourse_user'),
-    password=os.getenv('POSTGRES_PASSWORD', 'concourse_pass'),
+    user=os.getenv('POSTGRES_USER', 'postgres'),
+    password=os.getenv('POSTGRES_PASSWORD', 'password'),
     port=os.getenv('POSTGRES_PORT', '5432')
 )
 
