@@ -35,8 +35,8 @@ df_table = df_table[1:]
 
 db_host = "172.27.80.1"
 db_name = "reliance"
-db_user = "docker"
-db_password = "docker"
+db_user = "md-postgres"
+db_password = "password"
 db_port = "5432"
 
 engine = create_engine(f'postgresql+psycopg2://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}')
