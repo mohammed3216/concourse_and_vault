@@ -5,9 +5,9 @@ export VAULT_ADDR='http://192.168.3.59:8200'
 export VAULT_TOKEN='test'
 
 # Retrieve the secrets from Vault
-username=$(vault kv get -field=username secret/myapp)
+email=$(vault kv get -field=email secret/myapp)
 password=$(vault kv get -field=password secret/myapp)
 
 # Echo the retrieved secrets to the console
-echo "Username: $username"
+echo "Email: $email"
 echo "Password: $password"
