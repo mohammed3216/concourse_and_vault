@@ -7,7 +7,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.service import Service
 import time
 import os
-
+import pandas as pd
+from openpyxl import load_workbook
+from sqlalchemy import create_engine
+import psycopg2
 chrome_options = Options()
 chrome_options.add_argument("--headless")  # Run in headless mode
 chrome_options.add_argument("--disable-gpu")
@@ -67,3 +70,34 @@ export.click()
 time.sleep(10)
 download_dir = current_dir
 print("Files in download directory before wait:", os.listdir(download_dir))
+
+
+
+# Read Excel file into pandas DataFrame
+# df = pd.read_excel(os.path.join(download_dir, "Reliance Industr.xlsx"),header=0)
+
+# # Read Excel file into pandas DataFrame
+# # df = pd.read_excel("Reliance Industr.xlsx")
+
+# # Print column names
+# print(df.columns)
+
+# # Select rows and columns
+# df = df.iloc[1:20, :11]
+
+# # Print resulting DataFrame
+# print(df)
+
+
+
+df = pd.read_excel("Reliance Industr.xlsx", sheet_name="Data Sheet")
+
+# Print column names
+print(df.columns)
+
+# Select rows and columns
+df = df.iloc[14:30, :11]
+
+# df.head(3)
+# Print resulting DataFrame
+print(df)
