@@ -3,7 +3,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.chrome.service import Service
 import time
 import os
 import pandas as pd
@@ -27,6 +26,7 @@ prefs = {
 chrome_options.add_experimental_option("prefs", prefs)
 
 service = Service('/usr/local/bin/chromedriver')
+
 driver = webdriver.Chrome(service=service, options=chrome_options)
 
 def login(username, password):
@@ -81,7 +81,7 @@ login("firstscreener123@gmail.com", "Asdf!234")
 companies = {
     "Reliance": "https://www.screener.in/company/RELIANCE/consolidated/",
     "TCS": "https://www.screener.in/company/TCS/consolidated/",
-    "Infosys": "https://www.screener.in/company/INFY/consolidated/"
+    "Infosys": "https://www.screener.in/company/INFY/consolidated/",
     # Add more companies here
 }
 
