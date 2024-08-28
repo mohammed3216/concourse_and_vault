@@ -103,9 +103,9 @@ df = df.iloc[14:30, :11]
 print(df)
 
 db_host = "172.27.80.1" #"192.168.29.101"
-db_name = "exampledb"
-db_user = "docker"
-db_password = "docker"
+db_name = ""reliance
+db_user = "mdop"
+db_password = "password"
 db_port = "5432"
  
 # Create the database engine
