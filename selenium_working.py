@@ -54,7 +54,7 @@ def login(username, password):
 
 
 
-driver.get("https://www.screener.in/company/RELIANCE/consolidated/")
+driver.get("https://www.screener.in/company/ZOMATO/consolidated/")
 
 export = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((By.XPATH, '//*[contains(concat( " ", @class, " " ), concat( " ", "icon-download", " " ))]'))
@@ -90,7 +90,7 @@ print("Files in download directory before wait:", os.listdir(download_dir))
 
 
 
-df = pd.read_excel("Reliance Industr.xlsx", sheet_name="Data Sheet")
+df = pd.read_excel("Zomato Industr.xlsx", sheet_name="Data Sheet")
 
 # Print column names
 print(df.columns)
