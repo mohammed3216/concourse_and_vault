@@ -113,4 +113,3 @@ engine = create_engine(f'postgresql+psycopg2://{db_user}:{db_password}@{db_host}
  
 # Load the transposed DataFrame into the PostgreSQL database
 df.to_sql('companies_data', engine, if_exists='replace', index=False)
-has context menu
