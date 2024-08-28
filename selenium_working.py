@@ -90,7 +90,7 @@ print("Files in download directory before wait:", os.listdir(download_dir))
 
 
 
-df = pd.read_excel("Reliance Industr",  "Zomato Ltd.xlsx", sheet_name="Data Sheet")
+df = pd.read_excel("Reliance Industr. Zomato Ltd.xlsx", sheet_name="Data Sheet")
 
 # Print column names
 print(df.columns)
